@@ -342,7 +342,7 @@ export class Xterm extends Component<Props> {
         overlayAddon.showOverlay('Connection Closed', null);
 
         // 1000: CLOSE_NORMAL
-        if (event.code !== 1000 && doReconnect) {
+        if (doReconnect) {
             overlayAddon.showOverlay('Reconnecting...', null);
             refreshToken().then(connect);
         } else {
